@@ -143,10 +143,10 @@ function Ask(){
         resp = "Nada."
     }
     else
-        resp = "O peixe não sabe!"
+        resp = "O gato não sabe!"
 
 
-    resultado.innerHTML = `<p>Entre ${perg[0].value} e ${perg[1].value} o Peixe decidiu:</p>` 
+    resultado.innerHTML = `<p>Entre ${perg[0].value} e ${perg[1].value} o Gato decidiu:</p>` 
     //resultado.innerHTML = `<p>${pts[0].toPrecision(3)} é maior ${pts[1].toPrecision(3)}?</p>` 
     resultado.innerHTML += `<p style="margin-top: 10px; font: bold 30px Arial;">${resp}</p>` 
 }

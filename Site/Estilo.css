@@ -1,57 +1,66 @@
-body{
+body {
     font: bold 20px Arial;
     text-align: none;
     background: royalblue;
     padding: 0;
     margin: 0;
 }
-div#border{
+
+div#border {
     position: relative;
     text-align: center;
     margin: auto;
     margin-top: 10px;
-    width: 16.2cm;
-    height: 22cm;
+    width: 100%; /* Ajuste a largura para 100% */
+    max-width: 16.2cm; /* Define a largura máxima */
+    height: auto; /* Ajusta a altura automaticamente */
     border: 5px solid black;
     border-radius: 8px;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.39);
     margin-bottom: -20px;
 }
-img{
+
+img {
     position: relative;
     align-items: center;
     transform: scale(0.8);
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto;
 }
-header{
+
+header {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
 }
-h1{
+
+h1 {
     margin: auto;
     font: bold 32px Arial;
     margin-bottom: 10px;
 }
-section{
+
+section {
     text-align: center;
     border: 5px solid black;
     margin: auto;
     background-color: white;
     border-radius: 15px;
-    width: 500px;
-    height: 235px;
+    width: 100%; /* Ajusta a largura para 100% */
+    max-width: 500px; /* Define a largura máxima */
+    height: auto; /* Ajusta a altura automaticamente */
     padding: 20px;
     box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.39);
 }
 
-input{
+input {
     font: bold 20px Arial;
-    width: 200px;
+    width: 100%; /* Ajusta a largura para 100% */
+    max-width: 200px; /* Define a largura máxima */
     text-align: center;
 }
 
-div#result{
-    
+div#result {
     background-color: gray;
     align-items: center;
     text-align: center;
@@ -59,16 +68,49 @@ div#result{
     border-radius: 10px;
     margin: 2px;
     padding: 2px;
-    height: 100px;
+    height: auto; /* Ajusta a altura automaticamente */
+    min-height: 100px; /* Define uma altura mínima */
     border: 2px solid black;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.404);
     overflow: hidden;
 }
-div#result p{
+
+div#result p {
     align-items: center;
     text-align: center;
     justify-content: center;
     font: bold 20px Arial;
     margin-top: 15px;
     margin-bottom: -3px;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    section {
+        width: 90%; /* Ajusta a largura para 90% */
+        max-width: none; /* Remove a largura máxima */
+    }
+
+    input {
+        width: 100%;
+        max-width: none; /* Remove a largura máxima */
+    }
+
+    div#result {
+        min-height: 80px; /* Ajusta a altura mínima para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
 }
